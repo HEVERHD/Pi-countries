@@ -2,10 +2,13 @@ const axios = require('axios');
 const router = '.';
 const { Country, Activity } = require('../db');
 const server = require('express').Router();
+/*[ ] GET /countries:
+En una primera instancia deberán traer todos los países desde restcountries y guardarlos en su propia base de datos y luego ya utilizarlos desde allí (Debe almacenar solo los datos necesarios para la ruta principal)
+Obtener un listado de los paises.*/
 
 const getApiInfo = async () => {
-	const { data } = await axios('https://restcountries.com/v3/all');
-	const api = await data.map((country) => {
+	const apiUrl = await axios('https://restcountries.com/v3/all');
+	const apiInfo = await apiUrl.data.map((country) => {
 		return {
 			id: country.cca3,
 			name: country.name.common,
@@ -16,11 +19,13 @@ const getApiInfo = async () => {
 			poblation: country.population,
 		};
 	});
-	const result = await Country.bulkCreate(api);
+	return apiInfo;
+	const result = await Country.bulkCreate(api); // busca en el arr y matchea llenando las tablas con lo que necesito, sino lo ignora
 	return result;
 };
 const getDbInfo = async () => {
 	return await Country.findAll({
+		// hago la consulta a mi db, si tengo los datos no hace nada, sino los tiene, los creo..
 		include: {
 			model: Activity,
 			attribute: ['name', 'difficulty', 'duration', 'season'],
@@ -29,6 +34,13 @@ const getDbInfo = async () => {
 			},
 		},
 	});
+};
+
+const getAllCountires = async (req, res) => {
+	const apiInfo = await getApiInfo();
+	const dbInfo = await getDbInfo();
+	const infoTotal = apiInfo.concat(dbInfo);
+	return infoTotal;
 };
 const ActInfo = async () => {
 	return await Activity.findAll({
@@ -47,20 +59,20 @@ server.get('/countries/:id', async function (req, res) {
 	}
 });
 
-server.get('/countries', async function (req, res) {
-	const { name } = req.query;
-	let countries;
-	const countryDB = await Country.count();
-	countries = countryDB === 0 ? await getApiInfo() : await getDbInfo();
+server.get('/countries', async (req, res) => {
+	const name = req.query.name;
+	let countriesTotal = await getAllCountires();
 	if (name) {
-		const byName = countries.filter((n) =>
-			n.id.toLowerCase().includes(name.toLowerCase())
+		let countriesName = countriesTotal.filter((el) =>
+			el.name.toLowerCase().includes(name.toLowerCase())
 		);
-		byName.length
-			? res.status(200).send(byName)
-			: res.status(404).send('no se encontro ningun pais');
+		countriesName.length
+			? res.status(200).send(countriesName)
+			: res
+					.status(404)
+					.send('No se encontraron paises con ese nombre, intenta con otro');
 	} else {
-		res.status(200).send(countries);
+		res.status(200).send(countriesTotal);
 	}
 });
 server.post('/activity', async function (req, res) {
