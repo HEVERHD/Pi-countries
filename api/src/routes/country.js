@@ -19,8 +19,7 @@ const getApiInfo = async () => {
 			poblation: country.population,
 		};
 	});
-	return apiInfo;
-	const result = await Country.bulkCreate(api); // busca en el arr y matchea llenando las tablas con lo que necesito, sino lo ignora
+	const result = await Country.bulkCreate(apiInfo); // busca en el arr y matchea llenando las tablas con lo que necesito, sino lo ignora
 	return result;
 };
 const getDbInfo = async () => {
@@ -79,7 +78,7 @@ server.post('/activity', async function (req, res) {
 	const { name, season, duration, difficulty, idCountry } = req.body;
 
 	try {
-		const actCreada = await Activity.create({
+		const activityCreada = await Activity.create({
 			name,
 			season,
 			duration,
@@ -87,9 +86,9 @@ server.post('/activity', async function (req, res) {
 		});
 
 		if (idCountry) {
-			actCreada.addCountry(idCountry);
+			activityCreada.addCountry(idCountry);
 		}
-		res.send(actCreada);
+		res.send('Actividad creada con exito!');
 	} catch (err) {
 		console.log(err);
 	}
