@@ -49,11 +49,11 @@ const ActInfo = async () => {
 
 server.get('/countries/:id', async function (req, res) {
 	const id = req.params.id.toUpperCase();
-	const allCountries = await getDbInfo();
+	const countriesTotal = await getDbInfo();
 	if (id) {
-		const idCountries = allCountries.filter((i) => i.id === id);
+		const idCountries = countriesTotal.filter((i) => i.id === id);
 		idCountries.length
-			? res.status(200).send(idCountries)
+			? res.status(200).json(idCountries)
 			: res.status(404).send('id no valido');
 	}
 });
