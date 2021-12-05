@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const StyledCards = styled.div`
 display: grid;
 background: var(--background);
@@ -8,6 +7,9 @@ box-shadow: 0 0 7px 2px rgba(0, 0, 0, .03);
 border-radius: 5px;
 margin: 1em;
 overflow: hidden;
+padding: 4em 2em;
+grid-row-gap: 2.3em;
+justify-content: center;
 
 
 

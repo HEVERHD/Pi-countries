@@ -7,7 +7,7 @@ const Card = ({ name, image, continents }) => {
 			<div className='info'>
 				<h2>{name}</h2>
 				<div className=' contImg'>
-					<img src={image} />
+					<img loading='lazy' src={image} />
 				</div>
 
 				<div className='contenedor'>
