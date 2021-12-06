@@ -21,7 +21,7 @@ const Search = () => {
 
 	useEffect(() => {
 		dispatch(getCoutryName(name));
-	}, [name]);
+	}, [dispatch, name]);
 
 	return (
 		<StyledSearch>

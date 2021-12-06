@@ -53,7 +53,6 @@ export const getCoutryName = (payload) => {
 			});
 		};
 	} catch (error) {
-		console.log(error);
 		// return dispatch({
 		//   type: SEARCH,
 		//   payload:error,
