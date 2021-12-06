@@ -8,8 +8,7 @@ export const StyledNavbar = styled.div`
 	top: 0;
 	left: 0;
 	z-index: 10;
-	border-bottom: 2px solid #e2d8d8;
-	box-shadow: 0 9px 16px #fff;
+	display: flex;
 	.container {
 		margin: auto;
 		width: 90%;
@@ -53,6 +52,7 @@ export const StyledNavbar = styled.div`
 		font-family: 'Dancing Script', cursiva;
 	}
 	.list {
+		display: flex;
 		list-style: none;
 		display: flex;
 		align-items: center;
@@ -63,6 +63,7 @@ export const StyledNavbar = styled.div`
 		margin: 0 5px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.list-item a {

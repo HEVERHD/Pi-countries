@@ -26,27 +26,29 @@ export const StyledHome = styled.div`
 		line-height: 4;
 
 		.select::after {
+			color: var(--background);
 			position: absolute;
 			top: 0;
 			right: 0;
 			padding: 0 1em;
-			background: #e2e;
+			background: var(--switch);
 			cursor: pointer;
 			pointer-events: none;
-			transition: 0.1s all ease;
+			transition: all 0.3s ease;
 		}
 
 		.select:hover::after {
-			color: #23b499;
+			color: var(--white);
 		}
 
 		select {
+			border: 1px var(--background) solid;
 			border-radius: 20px;
-			background: #1c1b1b;
+			background: var(--white);
 			margin: 1px 20px;
 			flex: 1;
 			padding: 3px;
-			color: #fff;
+			color: var(--black);
 			cursor: pointer;
 			font-size: 1em;
 		}
@@ -54,7 +56,7 @@ export const StyledHome = styled.div`
 
 	.contenedor_loading {
 		.loading {
-			color: #151516;
+			color: var(--black);
 			font-size: 20px;
 			position: relative;
 		}

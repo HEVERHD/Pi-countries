@@ -44,7 +44,7 @@ const Navbar = () => {
 						</li>
 						<li className='list-item'>
 							<NavLink exact to='/create/activity'>
-								Create Activity
+								<center>Create Activity </center>
 							</NavLink>
 						</li>
 						<li className='list-item'>

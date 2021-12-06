@@ -23,7 +23,7 @@ export const StyledSearch = styled.div`
 		font-size: 0.8em;
 		outline: 0;
 		&::-webkit-input-placeholder {
-			color: #c4c4c4;
+			color: var(--gray);
 		}
 	}
 
@@ -34,6 +34,6 @@ export const StyledSearch = styled.div`
 		top: 50%;
 		transform: translateY(-50%);
 		font-size: 25px;
-		color: blue;
+		color: var(--gray);
 	}
 `;
