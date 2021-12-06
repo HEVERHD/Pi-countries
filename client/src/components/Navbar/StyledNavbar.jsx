@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const StyledNavbar = styled.div`
 	width: 100%;
 	position: fixed;
-	background-color: #1c1b1b;
+	background: var(--white);
+	color: var(--black);
 	top: 0;
 	left: 0;
 	z-index: 10;
@@ -15,13 +16,16 @@ export const StyledNavbar = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		color: #e2d8d8;
+		color: var(--black);
 		padding: 10px;
 
 		.img {
 			border: 2px solid red;
 		}
-
+		.far {
+			font-size: 1.5rem;
+			margin-right: 10px;
+		}
 		.social-media {
 			margin: 0 15px;
 			font-size: 40px;
@@ -29,12 +33,13 @@ export const StyledNavbar = styled.div`
 			align-items: center;
 			justify-content: center;
 			a {
-				color: #ffff;
+				color: var(--black);
 				margin: 10px;
 				transition: color 200ms ease;
 
 				&:hover {
-					color: #8fbfd6eb;
+					background: var(--background);
+					color: var(--black);
 					/* color: black; */
 				}
 			}
@@ -42,6 +47,7 @@ export const StyledNavbar = styled.div`
 	}
 
 	.title {
+		color: var(--black);
 		font-weight: bold;
 		font-size: 40px;
 		font-family: 'Dancing Script', cursiva;
@@ -51,33 +57,35 @@ export const StyledNavbar = styled.div`
 		display: flex;
 		align-items: center;
 	}
-	.list-item {
+	.list-item,
+	.far {
+		color: var(--black);
 		margin: 0 5px;
 		display: flex;
 		align-items: center;
 	}
 
 	.list-item a {
-		color: #e2d8d8;
+		color: var(--background);
 		/* height: 100%; */
 		padding: 6px 14px;
 		margin-top: 5px;
 		margin-bottom: 5px;
 		text-decoration: none;
 		border-radius: 20px;
-		transition: background-color 250ms ease;
+		transition: background-color 150ms ease;
 		font-weight: bold;
-		border: 2px solid black;
-		font-family: 'Overpass', sans-serif;
+		border: 2px solid var(--background);
+		font-family: 'Dancing Script', cursiva;
 	}
 
 	.active {
-		background-color: #8fbfd6eb;
+		background-color: var(--black);
 	}
 
 	.list-item a:hover {
-		background-color: #243ec3;
-		color: black;
+		background-color: var(--background);
+		color: var (--background);
 		font-weight: bold;
 	}
 

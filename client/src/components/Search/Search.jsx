@@ -23,15 +23,23 @@ const Search = () => {
 		dispatch(getCoutryName(name));
 	}, [dispatch, name]);
 
+	const clearInput = () => {
+		dispatch({
+			type: 'COUNTRY',
+			payload: '',
+		});
+	};
+
 	return (
 		<StyledSearch>
 			<div>
+				<i class='fas fa-search'></i>
 				<input
 					type='text'
-					placeholder='Escribe el nombre de un pais'
+					placeholder='Buscar país...'
 					onChange={(e) => handleChange(e)}
 				></input>
-				{/* <button type='submit' >Buscar</button> */}
+				<i class='fas fa-times close'></i>
 			</div>
 		</StyledSearch>
 	);

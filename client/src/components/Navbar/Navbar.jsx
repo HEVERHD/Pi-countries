@@ -37,6 +37,7 @@ const Navbar = () => {
 				<div>
 					<ul className='list'>
 						<li className='list-item'>
+							<i class='far fa-moon'>Modo oscuro</i>
 							<NavLink exact to='/home'>
 								Home
 							</NavLink>

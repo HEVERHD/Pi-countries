@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 
 export const StyledSearch = styled.div`
-	margin: auto;
-	max-width: 400px;
-	width: 90%;
-	padding-top: 20px;
+	background: var(--white);
 	box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+	padding: 0 2rem;
+	border-radius: 4px;
+
+	i {
+		margin-right: 1em;
+		color: #c4c4c4;
+	}
 
 	input {
-		width: 100%;
+		background: var(--white);
+		position: center;
+		/* width: 100%; */
+		flex: 1;
 		border-radius: 5px;
 		border: none;
 		height: 48px;
 		line-height: 48px;
-		padding: 0 2rem;
 		font-size: 0.8em;
+		outline: 0;
 		&::-webkit-input-placeholder {
 			color: #c4c4c4;
-			position: center;
 		}
 	}
 

@@ -9,7 +9,6 @@ const Card = ({ name, image, continents }) => {
 				<div className=' contImg'>
 					<img loading='lazy' src={image} alt='imagen de welcome' />
 				</div>
-
 				<div className='contenedor'>
 					<p>
 						<strong>Continent:</strong>

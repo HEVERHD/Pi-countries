@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const StyledCards = styled.div`
 display: grid;
-background: var(--background);
+background: var(--white);
 width: 264px;
 box-shadow: 0 0 7px 2px rgba(0, 0, 0, .03);
 border-radius: 5px;
