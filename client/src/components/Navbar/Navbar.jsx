@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyledNavbar } from './StyledNavbar';
 import { NavLink } from 'react-router-dom';
+// import Img from './images/lupa.svg';
 
 const Navbar = () => {
 	return (
 		<StyledNavbar>
+			{/* <img className='img' src={Img} /> */}
 			<div className='container'>
 				<div className='title'>
 					<p>HEVER DAVID GELIS DIAZ</p>

@@ -1,23 +1,28 @@
-import './App.css';
-import React from 'react';
-import Inicio from './components/inicio/inicio'
-import Home from './components/home/home'
-import Post from './components/post/Post'
-import detalle from './components/detalle/detalle'
-import Nav from './components/nav/nav'
-import { Route, BrowserRouter  } from "react-router-dom";
-import { Fragment } from 'react';
-function App() {
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import LandingPage from './components/LandingPages/LandingPage';
+import Home from './components/Home/Home';
+import ActivityCreate from './components/ActivityCreate/ActivityCreate';
+import Detail from './components/Detail/Detail';
+import Navbar from './components/Navbar/Navbar';
+import About from './components/About/About';
+
+
+const App = () => {
   return (
-   <Fragment>
-     <BrowserRouter>
-      <Route exact path = '/' component = {Inicio} /> 
-      <Route exact path = '/home' component = {Nav} />
-      <Route exact path = '/home' component = {Home} />
-      <Route exact path = '/post' component = {Post} /> 
-      <Route exact path = '/detail/:id' component = {detalle} /> 
-     </BrowserRouter>
-   </Fragment>
+    <>
+      <BrowserRouter>
+        <Switch>
+         <Route exact path='/' component={LandingPage} ></Route>
+         <Route path='/' >
+         <Navbar />
+         <Route exact path='/home' component={Home} ></Route>
+         <Route exact path='/detail/:id' component={Detail} ></Route>
+         <Route exact path='/create/activity' component={ActivityCreate} ></Route>
+         <Route exact path='/about' component={About} ></Route>
+         </Route>
+         </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
