@@ -32,13 +32,7 @@ const Detail = (props) => {
 							<h1>{i.name}</h1>
 							<div>
 								<img className='imgDetails' src={i.img} alt='Not found'></img>
-								{
-									<img
-										className='imgDetails2'
-										src={i.img}
-										alt='Not found'
-									></img>
-								}
+
 								<h3>Continent: {i.continents}</h3>
 								<h3>Capital: {i.capital}</h3>
 
