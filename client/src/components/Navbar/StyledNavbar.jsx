@@ -59,6 +59,7 @@ export const StyledNavbar = styled.div`
 	}
 	.list-item,
 	.far {
+		cursor: pointer;
 		color: var(--black);
 		margin: 0 5px;
 		display: flex;

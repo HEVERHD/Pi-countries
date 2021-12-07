@@ -3,7 +3,10 @@ import { StyledNavbar } from './StyledNavbar';
 import { NavLink } from 'react-router-dom';
 // import Img from './images/lupa.svg';
 
-const Navbar = () => {
+function Navbar({ setDarkMode, darkMode }) {
+	function handleClick() {
+		setDarkMode(!darkMode);
+	}
 	return (
 		<StyledNavbar>
 			{/* <img className='img' src={Img} /> */}
@@ -37,7 +40,10 @@ const Navbar = () => {
 				<div>
 					<ul className='list'>
 						<li className='list-item'>
-							<i class='far fa-moon'>Modo oscuro</i>
+							<p onClick={handleClick}>
+								Modo oscuro
+								<i class='far fa-moon'></i>
+							</p>
 							<NavLink exact to='/home'>
 								Home
 							</NavLink>
@@ -57,6 +63,6 @@ const Navbar = () => {
 			</div>
 		</StyledNavbar>
 	);
-};
+}
 
 export default Navbar;

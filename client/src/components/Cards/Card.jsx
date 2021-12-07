@@ -5,10 +5,10 @@ const Card = ({ name, image, continents }) => {
 	return (
 		<StyledCards>
 			<div className='info'>
-				<h2>{name}</h2>
 				<div className=' contImg'>
-					<img loading='lazy' src={image} alt='imagen de welcome' />
+					<img src={image} alt='imagen de welcome' />
 				</div>
+				<h2>{name}</h2>
 				<div className='contenedor'>
 					<p>
 						<strong>Continent:</strong>

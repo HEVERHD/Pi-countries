@@ -32,7 +32,7 @@ const Search = () => {
 
 	return (
 		<StyledSearch>
-			<div>
+			<div className='dark-mode'>
 				<i class='fas fa-search'></i>
 				<input
 					type='text'

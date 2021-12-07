@@ -11,11 +11,18 @@ padding: 4em 2em;
 grid-row-gap: 2.3em;
 justify-content: center;
 
+.nim{
+		border: red solid 2px;
+	}
+
 
 
 	&:hover {
+		border-bottom: var(--black) solid 4px;
+		grid-template-columns: 1fr;
 		transform: scale(1.02);
-		// overflow: scroll;
+		transition: all .3s ease-in-out;
+		cursor: pointer;
 	}
 
 
@@ -27,24 +34,30 @@ justify-content: center;
 	}
 
 	.info {
+		color: var(--black);
+		font-size: 8px;
 		height: 50%;
 		text-align: center;
 		font-size: 14px;
 		h1 {
 			
-			color: black;
+			color: var(--black);
 			font-family: 'Overpass', sans-serif;
 		}
 
 		h2 {
+			height: 40%;
+			font-size: 12px;
+			/* border : 3px solid red; */
 			color: var(--black);
-			font-weight: 700;
+			font-weight: 900;
 			margin-bottom: 1rem;
             margin: 0;
-			font-size: 18px;
+			font-size: 22px;
 			font-family: 'Overpass', sans-serif;
 		
 	}
+	
 
 	@media (max-width: 650px) {
 		flex-direction: column;

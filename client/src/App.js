@@ -9,7 +9,7 @@ import About from './components/About/About';
 
 const App = () => {
 	const [darkMode, setDarkMode] = useState(false);
-	const [checked, setChecked] = useState(false);
+	const [setChecked] = useState(false);
 	const mainClass = darkMode ? 'is-dark-mode' : 'is-light-mode';
 
 	function changeMedia(mq) {
@@ -21,16 +21,16 @@ const App = () => {
 		const mq = window.matchMedia('(prefers-color-scheme: dark)');
 		mq.addListener(changeMedia);
 		setDarkMode(mq.matches);
-		setChecked(mq.matches);
+
 		return () => {
 			mq.removeListener(changeMedia);
 		};
-	}, []);
+	}, [darkMode]);
 	return (
 		<main className={mainClass}>
 			<>
 				<BrowserRouter>
-					<Switch>
+					<Switch setDarkMode={setDarkMode} darkMode={darkMode}>
 						<Route exact path='/' component={LandingPage}></Route>
 						<Route path='/'>
 							<Navbar />
