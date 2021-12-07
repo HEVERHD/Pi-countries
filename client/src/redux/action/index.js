@@ -53,12 +53,13 @@ export const getCoutryName = (payload) => {
 			});
 		};
 	} catch (error) {
-		// return dispatch({
-		//   type: SEARCH,
-		//   payload:error,
-		// })
+		console.log(error);
 	}
 };
+// return dispatch({
+//   type: SEARCH,
+//   payload:error,
+// })
 
 export const createActivity = (payload) => {
 	return async (dispatch) => {

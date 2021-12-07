@@ -23,12 +23,12 @@ const Search = () => {
 		dispatch(getCoutryName(name));
 	}, [dispatch, name]);
 
-	const clearInput = () => {
-		dispatch({
-			type: 'COUNTRY',
-			payload: '',
-		});
-	};
+	// const clearInput = () => {
+	// 	dispatch({
+	// 		type: 'COUNTRY',
+	// 		payload: '',
+	// 	});
+	// };
 
 	return (
 		<StyledSearch>

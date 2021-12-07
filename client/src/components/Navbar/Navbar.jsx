@@ -16,25 +16,18 @@ function Navbar({ setDarkMode, darkMode }) {
 				</div>
 				<div className='social-media'>
 					<a
-						href='https://www.linkedin.com/in/luis-miguel-alfonzo-roca-web-developer/'
+						href='https://www.linkedin.com/in/hevert-david-gelis-diaz-98a4ba16b/'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
 						<i class='fab fa-linkedin'></i>
 					</a>
 					<a
-						href='https://github.com/LuisRocca'
+						href='https://github.com/HEVERHD'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
 						<i class='fab fa-github-square'></i>
-					</a>
-					<a
-						href='https://twitter.com/LuisRoc05207268'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<i class='fab fa-twitter-square'></i>
 					</a>
 				</div>
 				<div>

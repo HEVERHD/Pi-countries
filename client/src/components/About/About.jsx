@@ -90,7 +90,7 @@ const About = () => {
 					<i class='fab fa-linkedin'></i>
 					<p>
 						<a
-							href='https://www.linkedin.com/in/luis-miguel-alfonzo-roca-web-developer/'
+							href='https://www.linkedin.com/in/hevert-david-gelis-diaz-98a4ba16b/'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
@@ -100,37 +100,16 @@ const About = () => {
 				</div>
 				<div>
 					<i class='fab fa-linkedin'></i>
-					<p>
-						<a
-							href='https://www.linkedin.com/in/luis-miguel-alfonzo-roca-web-developer/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Linkedin
-						</a>
-					</p>
 				</div>
 				<div>
 					<i class='fab fa-github-square'></i>
 					<p>
 						<a
-							href='https://github.com/LuisRocca'
+							href='https://github.com/HEVERHD'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
 							Github
-						</a>
-					</p>
-				</div>
-				<div>
-					<i class='fab fa-twitter-square'></i>
-					<p>
-						<a
-							href='https://twitter.com/LuisRoc05207268'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Twitter
 						</a>
 					</p>
 				</div>
@@ -140,7 +119,7 @@ const About = () => {
 					<i class='fas fa-envelope-open-text'></i>
 					<p>E-mail</p>
 				</div>
-				<a href='mailto:luis.rocca96@gmail.com'>luis.Rocca96@gmail.com</a>
+				<a href='mailto:hever11.hdgd@gmail.com'>hever11.hdgd@gmail.com</a>
 			</div>
 		</StyledAbout>
 	);

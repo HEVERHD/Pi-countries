@@ -11,8 +11,20 @@ padding: 4em 2em;
 grid-row-gap: 2.3em;
 justify-content: center;
 
-.nim{
-		border: red solid 2px;
+.img2{ 
+
+	  	width: 100%;
+		  opacity: 0.70;
+		  transition: all 0.3s ease-in-out;
+		  &:hover{
+			  opacity: 1;
+			  transition-property: all;
+			  transition-duration: 0.3s;	
+			
+			
+		
+		  
+
 	}
 
 
@@ -20,16 +32,25 @@ justify-content: center;
 	&:hover {
 		border-bottom: var(--black) solid 4px;
 		grid-template-columns: 1fr;
-		transform: scale(1.02);
+		transform: scale(1.02 );
 		transition: all .3s ease-in-out;
 		cursor: pointer;
 	}
 
 
 		img {
-			width: 100%;
-			height: 160px;
+			width: 330px;
+			height: 220px;
+			border-radius: 5px;	
 			object-fit: cover;
+			object-position: center;
+			margin: 0 auto;
+			display: block;
+			grid-column: 1 / -1;
+			grid-row: 1 / -1;
+			justify-self: center;
+			align-self: center;
+
 		}
 	}
 

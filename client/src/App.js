@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/LandingPages/LandingPage';
 import Home from './components/Home/Home';
@@ -8,29 +7,29 @@ import Navbar from './components/Navbar/Navbar';
 import About from './components/About/About';
 
 const App = () => {
-	const [darkMode, setDarkMode] = useState(false);
-	const [setChecked] = useState(false);
-	const mainClass = darkMode ? 'is-dark-mode' : 'is-light-mode';
+	// const [darkMode, setDarkMode] = useState(false);
+	// const [setChecked] = useState(false);
+	// const mainClass = darkMode ? 'is-dark-mode' : 'is-light-mode';
 
-	function changeMedia(mq) {
-		setDarkMode(mq.matches);
-		setChecked(mq.matches);
-	}
+	// function changeMedia(mq) {
+	// 	setDarkMode(mq.matches);
+	// 	setChecked(mq.matches);
+	// }
 
-	useEffect(() => {
-		const mq = window.matchMedia('(prefers-color-scheme: dark)');
-		mq.addListener(changeMedia);
-		setDarkMode(mq.matches);
+	// useEffect(() => {
+	// 	const mq = window.matchMedia('(prefers-color-scheme: dark)');
+	// 	mq.addListener(changeMedia);
+	// 	setDarkMode(mq.matches);
 
-		return () => {
-			mq.removeListener(changeMedia);
-		};
-	}, [darkMode]);
+	// 	return () => {
+	// 		mq.removeListener(changeMedia);
+	// 	};
+	// }, []);
 	return (
-		<main className={mainClass}>
+		<main className>
 			<>
 				<BrowserRouter>
-					<Switch setDarkMode={setDarkMode} darkMode={darkMode}>
+					<Switch>
 						<Route exact path='/' component={LandingPage}></Route>
 						<Route path='/'>
 							<Navbar />
