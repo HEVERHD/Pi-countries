@@ -52,6 +52,7 @@ export const StyledNavbar = styled.div`
 		font-family: 'Dancing Script', cursiva;
 	}
 	.list {
+		color: white;
 		display: flex;
 		list-style: none;
 		display: flex;
@@ -59,6 +60,7 @@ export const StyledNavbar = styled.div`
 	}
 	.list-item,
 	.far {
+		color: var(--black);
 		cursor: pointer;
 		color: var(--black);
 		margin: 0 5px;
@@ -82,12 +84,14 @@ export const StyledNavbar = styled.div`
 	}
 
 	.active {
+		color: var(--black);
 		background-color: var(--black);
 	}
 
 	.list-item a:hover {
+		/* border: 2px solid red; */
 		background-color: var(--background);
-		color: var (--background);
+		color: white;
 		font-weight: bold;
 	}
 

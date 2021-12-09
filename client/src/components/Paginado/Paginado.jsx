@@ -16,6 +16,7 @@ const Paginado = ({ countries, couPerPage, paginado }) => {
 						pageNumber.map((n) => (
 							<li key={n}>
 								<a onClick={() => paginado(n)}>{n}</a>
+								{/* <button onClick={() => paginado(n)}>{n}</button> */}
 							</li>
 						))}
 				</ul>

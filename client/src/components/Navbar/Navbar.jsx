@@ -12,7 +12,7 @@ function Navbar({ setDarkMode, darkMode }) {
 			{/* <img className='img' src={Img} /> */}
 			<div className='container'>
 				<div className='title'>
-					<p>HEVER DAVID GELIS DIAZ</p>
+					<p>HEVERT DAVID GELIS DIAZ </p>
 				</div>
 				<div className='social-media'>
 					<a
@@ -33,7 +33,7 @@ function Navbar({ setDarkMode, darkMode }) {
 				<div>
 					<ul className='list'>
 						<li className='list-item'>
-							<p onClick={handleClick}>
+							<p className='list-item' onClick={handleClick}>
 								Modo oscuro
 								<i class='far fa-moon'></i>
 							</p>
@@ -42,6 +42,9 @@ function Navbar({ setDarkMode, darkMode }) {
 							</NavLink>
 						</li>
 						<li className='list-item'>
+							{/* <NavLink exact to='/http://localhost:3000/'>
+								Landing
+							</NavLink> */}
 							<NavLink exact to='/create/activity'>
 								<center>Create Activity </center>
 							</NavLink>
