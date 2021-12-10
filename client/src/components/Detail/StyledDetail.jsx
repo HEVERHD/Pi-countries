@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Img from './images/12.jpg';
 
 export const StyledDetail = styled.div`
 	

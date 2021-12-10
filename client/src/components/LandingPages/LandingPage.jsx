@@ -9,7 +9,6 @@ const LandingPage = () => {
 				<img src={Img} alt='imagen de welcome' />
 			</div>
 			<div className='container'>
-				<h1>PI Countries</h1>
 				<Link to='/home'>go</Link>
 			</div>
 		</StyledLanding>
