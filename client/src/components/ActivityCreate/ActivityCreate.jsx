@@ -108,6 +108,7 @@ const ActivityCreate = () => {
 					<div>
 						<label>Nombre : </label>
 						<input
+							placeholder=' Nombre de la actividad'
 							required
 							type='text'
 							value={input.name}
@@ -143,10 +144,10 @@ const ActivityCreate = () => {
 						)}
 					</div>
 					<div>
-						<label>Duration : </label>
+						<label>Duracion : </label>
 						<input
 							required
-							placeholder='place the hours of duration'
+							placeholder=' Seleccione una duracion aproximada en horas'
 							type='number'
 							value={input.duration}
 							name='duration'
@@ -160,7 +161,7 @@ const ActivityCreate = () => {
 						)}
 					</div>
 					<div>
-						<h2>Season</h2>
+						<h2>Temporada</h2>
 					</div>
 					<div className='select'>
 						<label>
