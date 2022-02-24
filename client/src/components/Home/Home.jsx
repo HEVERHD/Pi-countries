@@ -107,7 +107,12 @@ const Home = () => {
 					allpages.map((i) => (
 						<div className='contenedor'>
 							<Link to={'/detail/' + i.id}>
-								<Card key={i.id} name={i.name} image={i.img} />
+								<Card
+									key={i.id}
+									name={i.name}
+									image={i.img}
+									continents={i.continents}
+								/>
 							</Link>
 						</div>
 					))

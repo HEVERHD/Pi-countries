@@ -3,23 +3,26 @@ import { StyledCards } from './StyledCards';
 
 const Card = ({ name, image, continents }) => {
 	return (
-		<StyledCards>
-			<div className='info'>
-				{/* <div className=' contImg'>
+		console.log('continents', continents),
+		(
+			<StyledCards>
+				<div className='info'>
+					{/* <div className=' contImg'>
 					<img src={image} alt='imagen de welcome' />
 				</div> */}
-				<div className='img2'>
-					<img src={image} alt='imagen de welcome' />
+					<div className='img2'>
+						<img src={image} alt='imagen de welcome' />
+					</div>
+					<h2>{name}</h2>
+					<div className='contenedor'>
+						<p>
+							<h3>Continent:</h3>
+						</p>
+						<h2>{continents}</h2>
+					</div>
 				</div>
-				<h2>{name}</h2>
-				<div className='contenedor'>
-					<p>
-						<strong>Continent:</strong>
-						{continents}
-					</p>
-				</div>
-			</div>
-		</StyledCards>
+			</StyledCards>
+		)
 	);
 };
 
